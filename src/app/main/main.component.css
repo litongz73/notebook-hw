@@ -1,0 +1,23 @@
+.Container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.Container > * {
+  flex-shrink: 50%;
+  width: 50%;
+}
+
+.LeftContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+}

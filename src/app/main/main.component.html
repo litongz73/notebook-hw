@@ -1,0 +1,23 @@
+<p>works</p>
+<div class="Container">
+  <div class="LeftContainer">
+    <div class="header">
+      <p>Notes</p>
+      <p (click)="AddNotes()">+</p>
+    </div>
+    <div
+      style="display:flex; flex-direction: column; width: 80%;"
+      *ngIf="notes && notes.length > 0"
+    >
+      <div
+        style="width: 100%; display:flex; flex-direction: row;justify-content:space-between;"
+        *ngFor="let note of notes; let i = index"
+        (click)="switchNote(i)"
+      >
+        <p>{{ note.title }}</p>
+        <p (click)="deleteNote(note)">[X]</p>
+      </div>
+    </div>
+  </div>
+  <app-note></app-note>
+</div>

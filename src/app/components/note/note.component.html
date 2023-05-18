@@ -1,0 +1,9 @@
+<div class="container">
+  <input class="form-control" [(ngModel)]="note_display.title" />
+  <textarea class="form-control" [(ngModel)]="note_display.context"></textarea>
+
+  <div>
+    <button class="btn btn-primary" (click)="OnRevert()">Revert</button>
+    <button class="btn btn-primary" (click)="OnSave()">Save</button>
+  </div>
+</div>
